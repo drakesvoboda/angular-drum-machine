@@ -64,13 +64,12 @@
 						</li>
 					</ul>
 				</li>
-				<li class="dm-row">
+				<li class="dm-row add-row">
 					<form>
 						<input type="text" ng-model="_newRow.name" />
 						<input type="file" fileread="_newRow.file" />
 						<input type="submit" ng-click="addNewRow(_newRow)" />
 					</form>
-					{{_newRow.name}} {{_newRow.file}}
 				</li>
 			</ul>
 

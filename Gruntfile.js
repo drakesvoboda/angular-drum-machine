@@ -8,7 +8,7 @@ module.exports = function(grunt) {
     // Metadata.
     meta: {
         basePath: './',
-        srcPath: './public/sass/',
+        srcPath: './public/assets/sass/',
         deployPath: './public/assets/css/',
         bowerPath: './public/assets/bower_components/'
     },
@@ -21,7 +21,7 @@ module.exports = function(grunt) {
     connect: {
       server: {
         options: {
-          port: 8080,
+          port: 8900,
           base: './public'
         }
       }
