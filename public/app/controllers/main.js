@@ -1,6 +1,6 @@
 'use strict';
 
-.directive("fileread", [function () {
+app.directive("fileread", [function () {
     return {
         scope: {
             fileread: "="
