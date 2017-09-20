@@ -1,3 +1,4 @@
+/// <binding ProjectOpened='watch, sass, uglify' />
 module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
@@ -9,7 +10,7 @@ module.exports = function(grunt) {
     meta: {
         basePath: './',
         srcPath: './public/assets/sass/',
-        deployPath: './public/assets/css/',
+        deployPath: './public/dist',
         bowerPath: './public/assets/bower_components/'
     },
 
@@ -42,7 +43,7 @@ module.exports = function(grunt) {
           loadPath: ['<%= meta.bowerPath %>foundation/scss/', '<%= meta.bowerPath %>foundation/scss/foundation/components/']
         },
         files: {
-            '<%= meta.deployPath %>main.css': '<%= meta.srcPath %>main.scss'
+            '<%= meta.deployPath %>/css/main.css': '<%= meta.srcPath %>main.scss'
         }
       }
     },
@@ -53,7 +54,7 @@ module.exports = function(grunt) {
       },
       my_target: {
         files: {
-          'public/assets/js/angular_drums.min.js': ['public/assets/bower_components/angular-route/angular-route.min.js', 'public/assets/bower_components/howler/howler.min.js', 'public/app/**/*.js']
+          '<%= meta.deployPath %>/js/angular_drums.min.js': ['public/assets/bower_components/angular-route/angular-route.min.js', 'public/assets/bower_components/howler/howler.min.js', 'public/app/**/*.js']
         }
       }
     },

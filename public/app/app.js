@@ -14,3 +14,4 @@ app.run(['drumMachine', '$q', '$rootScope', '$timeout', function(drumMachine, $q
     })
   });
 }]);
+ 
